@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <h1><%= landmark.title %></h1>
+    <h2><%= landmark.location %></h2>
+    <p><a href="/landmarks/<%= landmark._id %>/edit">Edit Landmark</a></p>
+    <form action="/landmarks/<%= landmark._id %>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+    <footer>
+        <a href="/landmarks">All Landmarks</a>
+    </footer>
+</body>
+</html>

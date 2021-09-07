@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Landmark</title>
+</head>
+<body>
+    <form action="/landmarks/<%= landmark._id %>?_method=PUT" method="POST">
+        <div>
+            <label>Title</label>
+            <input type="text" id="title" name="landmark[title]" value="<%= landmark.title %>"/>
+        </div>
+        <div>
+            <label>location</label>
+            <input type="text" id="location" name="landmark[location]" value="<%= landmark.location %>"/>
+        </div>
+        <button type="submit">Update Landmark</button>
+    </form>
+    <a href="/landmarks/<%= landmark._id %>">Back to Landmark</a>
+</body>
+</html>
